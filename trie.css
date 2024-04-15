@@ -1,0 +1,11 @@
+*
+{
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+#fun1
+{
+    border: 1px solid black;
+    width: 40%;
+    height: 400px;
+}
