@@ -46,7 +46,7 @@ function insert_new()
     if(val===""){document.getElementById("mess").innerHTML="empty value";}
     else{
     insert(root,val);
-    document.getElementById("mess").innerHTML="name insert";
+    document.getElementById("mess").innerHTML="name inserted";
     }
     saveData();
     document.getElementById("in").value="";
