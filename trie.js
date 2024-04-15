@@ -32,7 +32,10 @@ let root = new TN();
 let words;
 function initialise()
 {
-    words = ["saurabh", "saurya", "ravi", "ravikishan", "rahul", "suryansh"];
+    words = ["saurabh","sunny","suryansh","aparana","aporva","shivam","shivani","shivansh","tanish","jagdish","sauurabhp",
+    "sakshi","prince","abhishek","rachit","prakhar","prakash","paras","avantika","sarthak","rahul","sanchit",
+    "saurya", "ravi", "ravikishan", "rahul", "lavnesh","mehul","ankit","avinash","kunal","mayank","samyak","ankita","siya","rajni","rajnish"
+    ,"pranjal","nancy","satyam","astha","pragati","anim","aayush","adarsh","aman","amit","aryan","deepak","kartik","kartikey"];
     for (let x of words) insert(root, x);  
 }
 initialise();
@@ -40,9 +43,16 @@ function insert_new()
 {
     let val=document.getElementById("in").value; 
 
-    if(val==="")return console.log("empty");
-   // console.log(val);
+    if(val===""){document.getElementById("mess").innerHTML="empty value";}
+    else{
     insert(root,val);
+    document.getElementById("mess").innerHTML="name insert";
+    }
+    saveData();
+    document.getElementById("in").value="";
+    setTimeout(()=>{
+        document.getElementById("mess").innerHTML="";
+    },3000);
 }
 function main() {
     let qur = document.getElementById("search").value;
@@ -62,5 +72,10 @@ function main() {
         }
        // console.log("");
     }
+    
 }
  
+//storing locally
+function saveData() {
+    localStorage.setItem("rootData", JSON.stringify(root));
+}
